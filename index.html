@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena FPS Duel</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Three.js Local File -->
+    <script src="three.min.js" onerror="console.error('Failed to load three.min.js'); alert('Failed to load Three.js library. Please ensure three.min.js is in the same folder as index.html');"></script>
+  </head>
+  <body>
+    <div id="ui">
+      <div class="top-bar">
+        <div class="game-title">Arena FPS Duel</div>
+        <div class="stats">
+          <span>Health: <span id="health-value">100</span></span>
+          <span>Score: <span id="score-value">0</span></span>
+        </div>
+      </div>
+      <div class="center-overlay">
+        <div id="crosshair"></div>
+      </div>
+      <div class="bottom-bar">
+        <div class="help">
+          <strong>Controls</strong> — Arrow keys to move / turn, Space to shoot
+        </div>
+        <button id="start-btn">Start Game</button>
+      </div>
+      <div id="game-over" class="modal hidden">
+        <div class="modal-content">
+          <h2>Game Over</h2>
+          <p>Your score: <span id="final-score">0</span></p>
+          <button id="restart-btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <canvas id="game-canvas"></canvas>
+    <script src="main.js"></script>
+  </body>
+</html>
+
